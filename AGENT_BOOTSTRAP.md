@@ -23,10 +23,12 @@ When a new chat is told only **“Lee este repo”**, the agent must infer the c
 13. Read `skills/PORTFOLIO_AND_SIMILARITY.md`.
 14. Read `skills/IMAGE_GENERATION_ENGINEERING.md`.
 15. Read `skills/EXPERIMENT_AND_LEARNING_LOOP.md`.
-16. Read `rules/ADOBE_RULES.md`, `rules/REJECTION_GATES.md`, and `rules/SAFETY_BARRIER_MATRIX.md`.
-17. Read the submission templates.
-18. With web access, verify current official Adobe rules, technical requirements, trends, collections, missions/briefs and relevant market signals before deciding what to produce.
-19. Record current date, source URLs, freshness, evidence tier, policy snapshot and demand hypothesis in the asset audit.
+16. Read `skills/PORTFOLIO_INTELLIGENCE_AND_SELF_LEARNING.md`.
+17. Read `research/PORTFOLIO_LEARNING_PROTOCOL.md` and `portfolio/PORTFOLIO_DATA_SCHEMA.md` when portfolio outcome data exists.
+18. Read `rules/ADOBE_RULES.md`, `rules/REJECTION_GATES.md`, and `rules/SAFETY_BARRIER_MATRIX.md`.
+19. Read the submission and portfolio templates.
+20. With web access, verify current official Adobe rules, technical requirements, trends, collections, missions/briefs and relevant market signals before deciding what to produce.
+21. Record current date, source URLs, freshness, evidence tier, policy snapshot and demand hypothesis in the asset audit.
 
 ## Freshness rule
 
@@ -57,6 +59,7 @@ It must independently:
 - model demand, buyer value, search intent, differentiation, saturation, seasonality and production reliability;
 - identify a concrete differentiation gap;
 - prefer concepts that are commercially relevant and meaningfully differentiated;
+- use the contributor's own portfolio outcomes when available without overfitting;
 - design a professional photographic brief;
 - engineer a generator-appropriate prompt;
 - generate or direct generation;
@@ -79,7 +82,9 @@ Use an evidence hierarchy:
 
 **Tier 3:** search/social/market observations used only as supporting signals.
 
-Never present an unsupported claim such as “this is the most requested photo” or “this will sell.” Adobe trend collections are directional signals, not public sales rankings. Explicitly distinguish **documented demand signal**, **commercial hypothesis**, and **unknown**.
+**Tier 4:** the contributor's own observed portfolio outcomes, used for personalization but not as proof of the general market.
+
+Never present an unsupported claim such as “this is the most requested photo” or “this will sell.” Adobe trend collections are directional signals, not public sales rankings. Explicitly distinguish **documented demand signal**, **commercial hypothesis**, **portfolio evidence**, and **unknown**.
 
 ## Candidate decision model
 
@@ -96,9 +101,28 @@ Before generation, compare at least 3 candidate concepts qualitatively for:
 - visual quality ceiling;
 - production reliability;
 - legal/IP cleanliness;
-- similarity/rejection risk.
+- similarity/rejection risk;
+- evidence from the contributor's own portfolio, when available.
 
 Use qualitative scores only as an internal decision aid. Never manufacture a probability of approval or a probability of sales.
+
+## Portfolio learning
+
+When outcome data exists, treat the portfolio as a long-term experiment database.
+
+The agent must:
+
+- preserve the observation window;
+- distinguish missing data from zero;
+- compare comparable cohorts;
+- account for asset age/exposure before comparing performance;
+- distinguish approval from commercial success;
+- record refusals and lessons;
+- maintain hypotheses with explicit evidence strength;
+- balance exploitation of supported patterns with controlled exploration;
+- never change Adobe compliance rules from portfolio performance alone.
+
+One asset is an anecdote. Repeated comparable observations may justify an internal heuristic, but no internal heuristic is a sales guarantee.
 
 ## Competitive strategy
 
@@ -110,7 +134,7 @@ Reject the pattern:
 
 Prefer:
 
-`validated demand signal + real buyer problem + distinctive execution + clean technical/legal profile`.
+`validated demand signal + real buyer problem + distinctive execution + clean technical/legal profile + portfolio gap`
 
 ## Photography standard
 
