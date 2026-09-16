@@ -34,9 +34,34 @@ After an image run, these short user commands are complete instructions:
 
 Do not ask the user to repeat the mission, Adobe requirements, resolution target or metadata requirements.
 
-Each command starts a **new independent production run** unless the user explicitly asks to continue the same subject.
+Each command starts a **new independent production run** unless the user explicitly asks to continue the same subject or series.
 
-The agent must re-run current research and opportunity selection, then generate a materially new concept. It must not simply repeat the previous prompt or create a trivial color/crop/flip variant.
+### Mandatory novelty behavior
+
+By default, the next image must be **genuinely different from the immediately previous image**, not merely a new action performed by the same subject.
+
+The agent must:
+
+1. read the previous run's exclusion fingerprint;
+2. perform fresh opportunity research when web access exists;
+3. build a new candidate pool;
+4. prefer a different category/family from the immediately previous image;
+5. require a different primary subject or subject class;
+6. require a different buyer/use case and scenario when practical;
+7. reject candidates that are only prompt edits or action changes;
+8. run the `DIFFERENT-CONCEPT GATE` before generation.
+
+A candidate is not sufficiently new when it keeps the same primary subject and category, even if the subject is doing a different activity.
+
+Example:
+
+`person lifting weights in a gym` → `same person stretching in the gym` = **REJECT AS NOT NEW**.
+
+`person lifting weights in a gym` → `artisan bread preparation in a modern bakery for food-brand editorial use` = **NEW CONCEPT**.
+
+A category change is the default diversification mechanism. Reusing the previous category requires a documented evidence-based exception, not convenience or prompt similarity.
+
+Do not use artificial category rotation when research strongly supports a distinct opportunity, but never weaken novelty merely to make generation easier.
 
 ## Mandatory final package for every generated image
 
@@ -78,7 +103,8 @@ Adobe's current guidance says titles should be brief and clear, ideally under 70
 - call an asset “approved” before Adobe moderation;
 - stop after writing a prompt when the environment can also generate/review the image;
 - call a low-resolution preview the final file;
-- claim an upscale, 100% inspection, metadata extraction or export verification that did not actually happen.
+- claim an upscale, 100% inspection, metadata extraction or export verification that did not actually happen;
+- satisfy `otra imagen` by changing only the activity, pose, color, crop, angle, lighting, outfit, prop or wording of the previous concept.
 
 ## If web access is unavailable
 
