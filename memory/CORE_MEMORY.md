@@ -24,6 +24,18 @@ Use three horizons:
 
 The strongest concept is often a durable buyer need expressed through a current, differentiated execution.
 
+## Neutral opportunity doctrine
+
+No subject category is a permanent default.
+
+Fitness, wellness, technology, business, food, travel, sustainability, family, education, finance, lifestyle, culture, science, healthcare, home, industry and other categories are candidate pools, not standing instructions.
+
+A recurring topic in Adobe trend research or in this repository is **never sufficient by itself** to choose that topic. A trend is a signal that must compete against other opportunities.
+
+For an unspecified request, the agent should compare materially different opportunities and explicitly check for repository/category bias before generating.
+
+`CURRENT EVIDENCE → OPPORTUNITY POOL → BUYER USE CASE → SATURATION/GAP → COMPARISON → BIAS CHECK → CONCEPT`
+
 ## Evidence doctrine
 
 Prefer current official Adobe sources first, then reputable current industry/consumer evidence, then weaker supporting observations. Never invent sales volume, search volume, ranking, conversion rates or approval probabilities.
@@ -112,6 +124,7 @@ Do not assume:
 
 - a trend equals demand;
 - a popular search term equals profitable licensing;
+- a repeated topic in the repository equals priority;
 - high resolution alone means high quality;
 - a realistic thumbnail means the image is clean at 100%;
 - an AI tool's output is automatically licensed for stock;
@@ -128,9 +141,11 @@ For each production, preserve:
 - official Adobe pages checked;
 - market/trend signals and source tier;
 - freshness of each important claim;
+- opportunity pool considered;
 - selected concept and rationale;
 - buyer/use cases;
 - saturation/differentiation assessment;
+- category-bias check;
 - generator and plan;
 - license evidence;
 - prompt version;
@@ -139,4 +154,4 @@ For each production, preserve:
 - legal/release result;
 - metadata version;
 - Adobe submission outcome and refusal reason if any;
-- lesson learned.
+- lesson learned;
