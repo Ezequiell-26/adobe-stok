@@ -12,18 +12,22 @@ el agente debe tratar este repositorio como su **manual operativo principal** y 
 
 Debe leer en este orden:
 
-1. `AGENT_BOOTSTRAP.md` — protocolo obligatorio de inicio y comportamiento autónomo.
-2. `memory/CORE_MEMORY.md` — memoria persistente del sistema.
+1. `AGENT_BOOTSTRAP.md` — protocolo obligatorio de inicio.
+2. `memory/CORE_MEMORY.md` — memoria persistente.
 3. `prompts/MASTER_GPT_IMAGE_SYSTEM.md` — sistema maestro de producción.
-4. `skills/STOCK_DEMAND_RESEARCH.md` — cómo decidir qué imagen producir actualmente.
-5. `skills/PRO_PHOTOGRAPHY.md` — dirección fotográfica profesional.
-6. `skills/AI_ARTIFACT_QC.md` — inspección visual estricta.
-7. `skills/LEGAL_IP_LICENSE.md` — propiedad intelectual, releases y licencias.
-8. `skills/METADATA_AND_SUBMISSION.md` — título, keywords, categoría y portal.
-9. `rules/ADOBE_RULES.md` — requisitos consolidados de Adobe.
-10. `rules/REJECTION_GATES.md` — gates de bloqueo.
-11. `rules/PLATFORM_MATRIX.md` — destino de plataformas.
-12. `templates/` — formatos de entrega y registro.
+4. `WORKFLOW.md` — flujo completo de principio a fin.
+5. `skills/STOCK_DEMAND_RESEARCH.md` — cómo decidir qué imagen producir actualmente.
+6. `skills/PRO_PHOTOGRAPHY.md` — dirección fotográfica profesional.
+7. `skills/AI_ARTIFACT_QC.md` — inspección visual estricta.
+8. `skills/LEGAL_IP_LICENSE.md` — propiedad intelectual, releases y licencias.
+9. `skills/METADATA_AND_SUBMISSION.md` — metadata y portal.
+10. `skills/PORTFOLIO_AND_SIMILARITY.md` — diferenciación y control de similitud.
+11. `skills/CHAT_OUTPUT_PROTOCOL.md` — comportamiento del agente en chats nuevos.
+12. `research/OFFICIAL_SOURCES.md` — fuentes oficiales y verificación.
+13. `rules/ADOBE_RULES.md` — reglas consolidadas de Adobe.
+14. `rules/REJECTION_GATES.md` — gates de bloqueo.
+15. `rules/PLATFORM_MATRIX.md` — destinos de plataforma.
+16. `templates/` — formatos de metadata y registro.
 
 Si el agente tiene acceso web, debe **verificar las fuentes oficiales actuales antes de decidir demanda/tendencias o realizar un lote grande**. Este repositorio no debe congelar una afirmación como “la foto más vendida” sin evidencia actual.
 
@@ -38,7 +42,7 @@ No perseguimos “una imagen bonita”. Producimos **stock profesional, útil, d
 - falta de releases;
 - spam o contenido demasiado similar;
 - licencias insuficientes del generador;
-- elección de temas sin demanda o excesivamente saturados.
+- elección de temas sin evidencia comercial o excesivamente saturados.
 
 ## PIPELINE CANÓNICO
 
@@ -47,7 +51,7 @@ No perseguimos “una imagen bonita”. Producimos **stock profesional, útil, d
 ## PRINCIPIOS NO NEGOCIABLES
 
 1. **Nunca garantizar aprobación.** Adobe Stock toma la decisión final de moderación.
-2. **Nunca confundir 4 MP con 4 MB.** Para fotos, la referencia actual es 4–100 MP y máximo 45 MB; JPEG sRGB. El tamaño de archivo no tiene un mínimo de 4 MB.
+2. **Nunca confundir 4 MP con 4 MB.** Para fotos, la referencia actual es 4–100 MP y máximo 45 MB; JPEG sRGB.
 3. **Nunca inventar demanda.** Las tendencias son señales; no equivalen automáticamente a ventas.
 4. **Investigar antes de generar** cuando se dispone de web: tendencias oficiales, categorías destacadas, necesidades comerciales y saturación observable.
 5. **Preferir conceptos diferenciados** sobre 20 variaciones casi iguales.
@@ -63,17 +67,9 @@ Reference date: 2026-09-17.
 
 Las políticas de Adobe pueden cambiar. El agente debe priorizar la fuente oficial más reciente sobre cualquier texto histórico del repositorio.
 
-## FUENTES OFICIALES PRINCIPALES
+## FUENTES
 
-- Adobe Stock account/submission guidelines
-- Adobe Stock generative AI guidelines and FAQ
-- Adobe Stock generative AI photo submission guidelines
-- Adobe Stock technical/legal photo requirements
-- Adobe Stock common refusal reasons
-- Adobe Stock distinct generative AI submission best practices
-- Adobe Stock creative trends / curated collections
-
-URLs oficiales y procedimiento de verificación: `research/OFFICIAL_SOURCES.md`.
+Las fuentes y URLs verificables están centralizadas en `research/OFFICIAL_SOURCES.md`.
 
 ## RESULTADO ESPERADO DE CADA EJECUCIÓN
 
