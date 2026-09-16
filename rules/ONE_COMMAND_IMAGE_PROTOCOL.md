@@ -16,28 +16,98 @@ The user does not need to repeat the stock-production instructions.
 
 When the user asks for another image after a completed production run, the agent must execute a **new independent production run** using the repository workflow.
 
-It must not simply regenerate the previous prompt or create a trivial variation.
+It must not simply regenerate the previous prompt, change the action of the same subject, or create a trivial variation.
 
 Required sequence:
 
-`NEW RESEARCH → NEW OPPORTUNITY SELECTION → NEW CONCEPT → NEW PHOTO BRIEF → GENERATE → SELECT/CURATE → UPSCALE/EXPORT → OUTPUT DELIVERY GATE → 100% QC → METADATA → LEGAL/LICENSE → PORTFOLIO/SIMILARITY → FINAL RESPONSE`
+`NEW RESEARCH → NEW OPPORTUNITY SELECTION → NEW CONCEPT → DIFFERENT-CONCEPT GATE → NEW PHOTO BRIEF → GENERATE → SELECT/CURATE → UPSCALE/EXPORT → OUTPUT DELIVERY GATE → 100% QC → METADATA → LEGAL/LICENSE → PORTFOLIO/SIMILARITY → FINAL RESPONSE`
+
+## Hard novelty rule
+
+For the default interpretation of **`otra imagen`**, the next asset must be **materially different from the immediately previous asset at the concept level**.
+
+A material difference normally requires at least **three major dimensions** to change, including:
+
+- primary subject or subject class;
+- category/family of opportunity;
+- buyer problem/use case;
+- scenario/context/environment;
+- visual narrative/action;
+- composition/layout;
+- subject-object relationship;
+- geographic/cultural context when genuinely relevant.
+
+At least **one of the three changes must be the primary subject or subject class**, unless the user explicitly requests a series in the same subject.
+
+### Strong default: change category
+
+Unless the user says otherwise, `otra imagen` should normally move to a **different opportunity category/family** from the previous image.
+
+Examples of category-family changes:
+
+- fitness → food;
+- business → travel;
+- technology → family/lifestyle;
+- wellness → sustainability;
+- finance → home/interiors;
+- education → industry/science.
+
+Changing category is a default diversification mechanism, not a forced forever-rotation. The current opportunity research can override it only when there is a strong evidence-based reason, and the agent must document that exception.
+
+## Explicitly forbidden as `otra imagen`
+
+Do **not** satisfy `otra imagen` with:
+
+- the same person doing a different exercise;
+- the same product in another position;
+- the same room with different props;
+- the same scene with a new color palette;
+- the same subject at another camera angle;
+- a horizontal/vertical flip;
+- a crop or zoom change;
+- a small lighting change;
+- a different outfit on the same subject;
+- a superficial prop replacement;
+- a different expression from the same underlying portrait;
+- a near-identical prompt with one noun or verb changed.
+
+A different action alone is **not** a different concept.
+
+Example:
+
+`person lifting weights → person stretching in the same gym` = **NOT A NEW CONCEPT**.
+
+`person lifting weights → close-up of sustainable meal-prep packaging for a meal-delivery campaign` = **NEW CONCEPT**.
+
+## Previous-output exclusion lock
+
+For each completed run, record a compact exclusion fingerprint containing:
+
+`CATEGORY | PRIMARY SUBJECT | BUYER USE CASE | SCENARIO | VISUAL NARRATIVE | COMPOSITION | KEY OBJECTS`
+
+For the next `otra imagen`, compare every candidate against the immediately previous fingerprint before generation.
+
+If a candidate shares the same primary subject **and** same category, reject it by default.
+
+If it shares three or more major dimensions with the previous asset, reject it as insufficiently different.
+
+If all viable candidates remain too similar, rerun opportunity research rather than weakening the novelty requirement.
 
 ## New opportunity requirement
 
-Unless the user explicitly asks to continue the same subject, the next image should be selected from the current opportunity pool again.
+Unless the user explicitly asks to continue the same subject/series, the next image should be selected from the current opportunity pool again.
 
-The agent may choose the same category again only when current evidence and the new concept justify it. It must not default to fitness, wellness, business, technology, travel, or any other recurring repository topic.
+The agent must first look for materially different opportunities. It may reuse a category only as an exception when current evidence and the new concept justify it; it must not reuse the previous concept merely because it was easy to generate.
 
-Avoid trivial changes such as:
+It must not default to fitness, wellness, business, technology, travel, or any other recurring repository topic.
 
-- same scene with a different color;
-- tiny crop;
-- horizontal/vertical flip;
-- minor camera shift;
-- superficial prop replacement;
-- nearly identical prompt wording.
+## Research requirement for `otra imagen`
 
-A new image should represent a materially different concept, buyer use case, context, visual narrative, subject relationship or composition.
+`Otra imagen` is **not** a shortcut that skips research.
+
+When web access exists, perform fresh current-demand research and build a new candidate pool. Use the previous asset only as an exclusion reference, not as an inspiration template.
+
+The previous image may inform what to avoid, not what to copy.
 
 ## Resolution and final-file contract
 
@@ -84,7 +154,7 @@ A concise, accurate English title describing the actual main subject and context
 
 A prioritized list of truthful, relevant keywords based only on the actual image. Do not use SEO bait, trademarks, names of real people, fictional characters, artist names, government agencies, or unsupported concepts.
 
-Adobe currently states that keyword order matters and allows up to 49 keywords per content submission; because metadata rules can change, verify current official guidance during fresh research. citeturn772465search0
+Adobe currently states that keyword order matters and allows up to 49 keywords per content submission; because metadata rules can change, verify current official guidance during fresh research.
 
 For practical metadata quality, prioritize the most essential visible concepts first and avoid padding the list with irrelevant terms.
 
@@ -109,8 +179,4 @@ Do not state that an image was upscaled, inspected at 100%, or exported at 4+ MP
 
 ## Adobe alignment
 
-Adobe's current public guidance says photos must be 4–100 MP, JPEG, sRGB and no larger than 45 MB; larger files can provide customers greater flexibility. citeturn772465search3
-
-Adobe's current generative-AI guidance also requires the content to be marked as generated with AI when applicable, and titles/keywords must not contain prohibited references such as real people, artists, fictional characters, government agencies, or third-party IP. citeturn772465search1turn772465search2
-
-These official sources are verification references, not permanent hard-coded facts. Re-check them when producing new assets.
+These official-source requirements and metadata details are verification references, not permanent hard-coded facts. Re-check them when producing new assets.
