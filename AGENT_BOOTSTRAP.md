@@ -13,33 +13,35 @@ When a new chat is told only **“Lee este repo”**, the agent must infer the c
 3. Read this file completely.
 4. Read `WORKFLOW.md`.
 5. Read `prompts/MASTER_GPT_IMAGE_SYSTEM.md`.
-6. Read `skills/STOCK_DEMAND_RESEARCH.md` and `research/OFFICIAL_SOURCES.md`.
-7. Read `skills/PRO_PHOTOGRAPHY.md`.
-8. Read `skills/BUYER_INTENT_AND_COMMERCIAL_VALUE.md`.
-9. Read `skills/COMPETITIVE_DIFFERENTIATION.md`.
-10. Read `skills/AI_ARTIFACT_QC.md`.
-11. Read `skills/LEGAL_IP_LICENSE.md`.
-12. Read `skills/METADATA_AND_SUBMISSION.md`.
-13. Read `skills/PORTFOLIO_AND_SIMILARITY.md`.
-14. Read `skills/IMAGE_GENERATION_ENGINEERING.md`.
-15. Read `skills/EXPERIMENT_AND_LEARNING_LOOP.md`.
-16. Read `rules/ADOBE_RULES.md` and `rules/REJECTION_GATES.md`.
-17. Read the submission templates.
-18. With web access, verify current official Adobe rules and current Adobe trend/collection signals before deciding what to produce.
-19. Record current date, source URLs, and policy snapshot in the asset audit.
+6. Read `skills/STOCK_DEMAND_RESEARCH.md` and `skills/LIVE_RESEARCH_PLAYBOOK.md`.
+7. Read `research/OFFICIAL_SOURCES.md` and the latest dated research snapshot when useful.
+8. Read `skills/PRO_PHOTOGRAPHY.md`.
+9. Read `skills/BUYER_INTENT_AND_COMMERCIAL_VALUE.md`.
+10. Read `skills/COMPETITIVE_DIFFERENTIATION.md`.
+11. Read `skills/AI_ARTIFACT_QC.md`.
+12. Read `skills/LEGAL_IP_LICENSE.md`.
+13. Read `skills/METADATA_AND_SUBMISSION.md`.
+14. Read `skills/PORTFOLIO_AND_SIMILARITY.md`.
+15. Read `skills/IMAGE_GENERATION_ENGINEERING.md`.
+16. Read `skills/EXPERIMENT_AND_LEARNING_LOOP.md`.
+17. Read `rules/ADOBE_RULES.md` and `rules/REJECTION_GATES.md`.
+18. Read the submission templates.
+19. With web access, verify current official Adobe rules, trends, collections, missions and relevant market signals before deciding what to produce.
+20. Record current date, source URLs and policy snapshot in the asset audit.
 
 ## Actual job
 
-The agent is not being asked merely to make a beautiful picture. Its job is to maximize the probability that the asset is useful to real Stock customers while minimizing refusal risk and portfolio redundancy.
+The agent is not being asked merely to make a beautiful picture. Its job is to maximize commercial usefulness and discoverability while minimizing refusal risk and portfolio redundancy.
 
 It must independently:
 
 - identify current demand signals without inventing sales data;
-- translate signals into buyer use cases and commercially useful image concepts;
-- compare several candidate concepts before selecting one;
-- prefer concepts that are in demand and meaningfully differentiated;
+- translate signals into buyer use cases;
+- compare several candidate concepts;
+- identify a concrete differentiation gap;
+- prefer concepts that are both commercially relevant and meaningfully differentiated;
 - design a professional photographic brief;
-- write a generator-appropriate production prompt;
+- engineer a generator-appropriate prompt;
 - generate or direct generation;
 - inspect the actual final image at 100%;
 - identify and fix/reject material defects;
@@ -47,7 +49,8 @@ It must independently:
 - validate IP, releases and tool-license rights;
 - create accurate search-oriented metadata;
 - prevent repetitive/near-duplicate portfolio submissions;
-- return a complete submission package with evidence and a final gate status.
+- record evidence and outcomes for future learning;
+- return a complete submission package and final gate status.
 
 ## Demand intelligence rules
 
@@ -69,7 +72,7 @@ Do not expose a fake probability of approval or sales. The score is a decision a
 
 ## Competitive strategy
 
-Do not compete by making more copies. Compete through deeper art direction, better realism and physical coherence, stronger composition for design use, credible context, useful negative space, less generic staging, better materials/environments, meaningful differentiation, cleaner metadata and selective curation.
+Do not compete by making more copies. Compete through deeper art direction, better realism and physical coherence, stronger composition for design use, specific contemporary context, useful negative space, less generic staging, credible materials/environments, clean metadata, and selective curation.
 
 A crowded generic concept should be rejected unless the proposed execution adds substantial new commercial value.
 
@@ -79,7 +82,7 @@ Treat the image as if captured by a top commercial photographer, not as an illus
 
 ## QC standard
 
-Inspect the final exported asset, not only the generation preview. Review at 100% for anatomy/facial consistency when people exist; hands, fingers, eyes, teeth and ears; duplication/fusion; warped geometry; perspective; reflections/shadows; material physics; repeated textures; halos; noise/banding/oversharpening; clipping; accidental text; logos/trademarks; resemblance to real people/protected characters; composition; commercial usability; and excessive similarity to planned/submitted assets.
+Inspect the final exported asset, not only the generation preview. Review at 100% for anatomy/facial consistency when applicable; hands, fingers, eyes, teeth and ears; duplication/fusion; warped geometry; perspective; reflections/shadows; material physics; repeated textures; halos; noise/banding/oversharpening; clipping; accidental text; logos/trademarks; resemblance to real people/protected characters; composition; commercial usability; and excessive similarity.
 
 One material failure blocks the asset.
 
@@ -99,7 +102,7 @@ Any unresolved license or rights issue is a HOLD, not an assumption. Generative-
 
 ## Learning loop
 
-Every accepted/refused asset should improve the system. Record concept, generation method, technical results, Adobe outcome, refusal reason when supplied, and lesson learned. Do not change core rules from one anecdote; update heuristics when evidence accumulates.
+Every accepted/refused asset should improve the system. Record concept, generation method, technical results, Adobe outcome, refusal reason when supplied, contributor performance data when actually available, and lesson learned. Do not change core rules from one anecdote; update heuristics when evidence accumulates.
 
 ## Final states
 
