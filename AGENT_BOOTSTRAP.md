@@ -1,81 +1,111 @@
 # AGENT BOOTSTRAP — READ THIS FIRST
 
-## Purpose
+## Mission
 
-This file turns the repository into a self-contained operating environment for a new GPT/agent session.
+This repository is a self-contained operating system for producing original, commercially useful, technically strong Adobe Stock assets created with generative AI.
 
-## Trigger phrase
+When a new chat is told only **“Lee este repo”**, the agent must infer the complete workflow from this repository and continue without asking the user to restate the job.
 
-When a new chat contains only an instruction equivalent to:
-
-> **Lee este repo.**
-
-the agent must not wait for a second prompt describing the job. The repository already defines the job.
-
-## Mandatory startup sequence
+## Startup sequence
 
 1. Read `README.md`.
 2. Read `memory/CORE_MEMORY.md`.
-3. Read `prompts/MASTER_GPT_IMAGE_SYSTEM.md`.
-4. Read the demand research skill.
-5. Read the professional photography skill.
-6. Read QC, legal/license and metadata skills.
-7. Read `rules/ADOBE_RULES.md` and `rules/REJECTION_GATES.md`.
-8. Read the submission templates.
-9. Verify current official Adobe pages when web access exists.
-10. Establish the current date and policy snapshot in the internal audit trail.
+3. Read this file completely.
+4. Read `WORKFLOW.md`.
+5. Read `prompts/MASTER_GPT_IMAGE_SYSTEM.md`.
+6. Read `skills/STOCK_DEMAND_RESEARCH.md` and `research/OFFICIAL_SOURCES.md`.
+7. Read `skills/PRO_PHOTOGRAPHY.md`.
+8. Read `skills/BUYER_INTENT_AND_COMMERCIAL_VALUE.md`.
+9. Read `skills/COMPETITIVE_DIFFERENTIATION.md`.
+10. Read `skills/AI_ARTIFACT_QC.md`.
+11. Read `skills/LEGAL_IP_LICENSE.md`.
+12. Read `skills/METADATA_AND_SUBMISSION.md`.
+13. Read `skills/PORTFOLIO_AND_SIMILARITY.md`.
+14. Read `skills/IMAGE_GENERATION_ENGINEERING.md`.
+15. Read `skills/EXPERIMENT_AND_LEARNING_LOOP.md`.
+16. Read `rules/ADOBE_RULES.md` and `rules/REJECTION_GATES.md`.
+17. Read the submission templates.
+18. With web access, verify current official Adobe rules and current Adobe trend/collection signals before deciding what to produce.
+19. Record current date, source URLs, and policy snapshot in the asset audit.
 
-## What the agent must understand immediately
+## Actual job
 
-The product of this repository is not a generic AI picture. The output is a **commercial Adobe Stock asset package**.
+The agent is not being asked merely to make a beautiful picture. Its job is to maximize the probability that the asset is useful to real Stock customers while minimizing refusal risk and portfolio redundancy.
 
-The agent must independently determine:
+It must independently:
 
-- what visual subject/use case is currently worth producing;
-- why it is commercially relevant;
-- what makes the proposed concept distinct from generic AI stock;
-- how to photographically direct it;
-- which generator settings/prompt structure are appropriate;
-- what defects must be rejected;
-- whether rights/releases/license issues exist;
-- what Adobe portal labels are required;
-- what title/keywords/category are truthful;
-- whether the final state is ready or must be blocked.
+- identify current demand signals without inventing sales data;
+- translate signals into buyer use cases and commercially useful image concepts;
+- compare several candidate concepts before selecting one;
+- prefer concepts that are in demand and meaningfully differentiated;
+- design a professional photographic brief;
+- write a generator-appropriate production prompt;
+- generate or direct generation;
+- inspect the actual final image at 100%;
+- identify and fix/reject material defects;
+- validate technical export requirements;
+- validate IP, releases and tool-license rights;
+- create accurate search-oriented metadata;
+- prevent repetitive/near-duplicate portfolio submissions;
+- return a complete submission package with evidence and a final gate status.
 
-## Autonomy rules
+## Demand intelligence rules
 
-Do not ask the user to restate repository rules.
+Use an evidence hierarchy:
 
-Do not invent current demand statistics.
+**Tier 1:** current official Adobe Stock trend pages, contributor guidance, Premium Collection guidance, missions/briefs and policy pages.
 
-Do not treat Adobe trend pages as proof of sales volume.
+**Tier 2:** current Adobe customer-facing collections/search/category signals and reputable current industry sources.
 
-Do not claim “this is the #1 requested photo” without direct current evidence.
+**Tier 3:** search/social/market observations used only as supporting signals.
 
-Do not stop after generating an image. Generation is only the midpoint.
+Never present an unsupported claim such as “this is the most requested photo” or “this will sell.” Adobe trend collections are directional signals, not public sales rankings. Explicitly distinguish **documented demand signal**, **commercial hypothesis**, and **unknown**.
 
-Do not upload automatically unless a separately authorized system explicitly supports upload. This repository is a preparation/QC system.
+## Candidate scoring
 
-## Decision policy
+Before generation, score at least 3 candidate concepts qualitatively from 0–10 for demand signal, buyer/use-case breadth, commercial utility, distinctiveness, visual quality ceiling, production reliability, legal/IP cleanliness, metadata/search clarity, portfolio gap/value, and similarity/rejection risk.
 
-When information is missing:
+Do not expose a fake probability of approval or sales. The score is a decision aid, not a forecast.
 
-- missing market evidence → use `UNKNOWN` and perform research;
-- missing license evidence → `HOLD_FOR_LICENSE_REVIEW`;
-- missing legal/release certainty → `HOLD_FOR_LEGAL_REVIEW`;
-- material visual/technical defect → `REJECTED_NEEDS_FIX`;
-- all gates pass → `READY_TO_UPLOAD`.
+## Competitive strategy
 
-## Desired agent behavior
+Do not compete by making more copies. Compete through deeper art direction, better realism and physical coherence, stronger composition for design use, credible context, useful negative space, less generic staging, better materials/environments, meaningful differentiation, cleaner metadata and selective curation.
 
-Act like the combination of:
+A crowded generic concept should be rejected unless the proposed execution adds substantial new commercial value.
 
-- commercial stock art director;
-- professional photographer;
-- image-generation prompt engineer;
-- strict photo retoucher/QC reviewer;
-- IP/commercial-rights preflight reviewer;
-- Adobe Stock metadata specialist;
-- production record keeper.
+## Photography standard
 
-The agent must be skeptical of its own output.
+Treat the image as if captured by a top commercial photographer, not as an illustration pretending to be a photograph. Control subject placement, perspective, optical look, depth of field, focus hierarchy, exposure, color temperature, texture, materials, reflections, contact shadows, background separation and post-production restraint.
+
+## QC standard
+
+Inspect the final exported asset, not only the generation preview. Review at 100% for anatomy/facial consistency when people exist; hands, fingers, eyes, teeth and ears; duplication/fusion; warped geometry; perspective; reflections/shadows; material physics; repeated textures; halos; noise/banding/oversharpening; clipping; accidental text; logos/trademarks; resemblance to real people/protected characters; composition; commercial usability; and excessive similarity to planned/submitted assets.
+
+One material failure blocks the asset.
+
+## Technical baseline
+
+Use current Adobe requirements from `rules/ADOBE_RULES.md` and re-check official sources when web access exists.
+
+Current repository photo baseline: JPEG, sRGB, 4–100 MP, <=45 MB, technically clean. **4 MB is not the minimum; 4 MP is the minimum resolution baseline.**
+
+## Metadata standard
+
+Metadata is part of the product. Titles and keywords must be truthful and buyer-oriented. Put the most important keywords first, never use IP names or irrelevant SEO bait, and keep metadata in one consistent language.
+
+## Rights and disclosure
+
+Any unresolved license or rights issue is a HOLD, not an assumption. Generative-AI content must be labeled according to current Adobe rules. The generation tool must permit intended commercial stock use.
+
+## Learning loop
+
+Every accepted/refused asset should improve the system. Record concept, generation method, technical results, Adobe outcome, refusal reason when supplied, and lesson learned. Do not change core rules from one anecdote; update heuristics when evidence accumulates.
+
+## Final states
+
+`READY_TO_UPLOAD`
+`REJECTED_NEEDS_FIX`
+`HOLD_FOR_LEGAL_REVIEW`
+`HOLD_FOR_LICENSE_REVIEW`
+
+Never say or imply approval is guaranteed. Adobe has final moderation authority.
