@@ -15,20 +15,21 @@ When a new chat is told only **“Lee este repo”**, the agent must infer the c
 5. Read `prompts/MASTER_GPT_IMAGE_SYSTEM.md`.
 6. Read `skills/STOCK_DEMAND_RESEARCH.md`, `skills/LIVE_RESEARCH_PLAYBOOK.md`, and `skills/TEMPORAL_MARKET_INTELLIGENCE.md`.
 7. Read `skills/MARKET_VALUE_AND_BUYER_DEMAND.md`, `skills/BUYER_INTENT_AND_COMMERCIAL_VALUE.md`, and `research/OFFICIAL_SOURCES.md` plus the newest dated research snapshot when useful.
-8. Read `skills/PRO_PHOTOGRAPHY.md`.
-9. Read `skills/COMPETITIVE_DIFFERENTIATION.md`.
-10. Read `skills/AI_ARTIFACT_QC.md`.
-11. Read `skills/LEGAL_IP_LICENSE.md`.
-12. Read `skills/METADATA_AND_SUBMISSION.md`.
-13. Read `skills/PORTFOLIO_AND_SIMILARITY.md`.
-14. Read `skills/IMAGE_GENERATION_ENGINEERING.md`.
-15. Read `skills/EXPERIMENT_AND_LEARNING_LOOP.md`.
-16. Read `skills/PORTFOLIO_INTELLIGENCE_AND_SELF_LEARNING.md`.
-17. Read `research/PORTFOLIO_LEARNING_PROTOCOL.md` and `portfolio/PORTFOLIO_DATA_SCHEMA.md` when portfolio outcome data exists.
-18. Read `rules/ADOBE_RULES.md`, `rules/REJECTION_GATES.md`, `rules/SAFETY_BARRIER_MATRIX.md`, and `rules/OUTPUT_DELIVERY_GATE.md`.
-19. Read the submission and portfolio templates.
-20. With web access, verify current official Adobe rules, technical requirements, trends, collections, missions/briefs and relevant market signals before deciding what to produce.
-21. Record current date, source URLs, freshness, evidence tier, policy snapshot and demand hypothesis in the asset audit.
+8. Read `skills/OPPORTUNITY_SELECTION_ENGINE.md` before choosing any concept.
+9. Read `skills/PRO_PHOTOGRAPHY.md`.
+10. Read `skills/COMPETITIVE_DIFFERENTIATION.md`.
+11. Read `skills/AI_ARTIFACT_QC.md`.
+12. Read `skills/LEGAL_IP_LICENSE.md`.
+13. Read `skills/METADATA_AND_SUBMISSION.md`.
+14. Read `skills/PORTFOLIO_AND_SIMILARITY.md`.
+15. Read `skills/IMAGE_GENERATION_ENGINEERING.md`.
+16. Read `skills/EXPERIMENT_AND_LEARNING_LOOP.md`.
+17. Read `skills/PORTFOLIO_INTELLIGENCE_AND_SELF_LEARNING.md`.
+18. Read `research/PORTFOLIO_LEARNING_PROTOCOL.md` and `portfolio/PORTFOLIO_DATA_SCHEMA.md` when portfolio outcome data exists.
+19. Read `rules/ADOBE_RULES.md`, `rules/REJECTION_GATES.md`, `rules/SAFETY_BARRIER_MATRIX.md`, and `rules/OUTPUT_DELIVERY_GATE.md`.
+20. Read the submission and portfolio templates.
+21. With web access, verify current official Adobe rules, technical requirements, trends, collections, missions/briefs and relevant market signals before deciding what to produce.
+22. Record current date, source URLs, freshness, evidence tier, policy snapshot and demand hypothesis in the asset audit.
 
 ## Freshness rule
 
@@ -55,7 +56,8 @@ It must independently:
 - identify current demand signals without inventing sales data;
 - distinguish actual evidence from inference;
 - translate signals into buyer use cases;
-- compare several candidate concepts;
+- compare several candidate concepts across different category families when enough evidence exists;
+- run the `OPPORTUNITY_SELECTION_ENGINE` category-bias check;
 - model demand, buyer value, search intent, differentiation, saturation, seasonality and production reliability;
 - identify a concrete differentiation gap;
 - prefer concepts that are commercially relevant and meaningfully differentiated;
@@ -86,6 +88,18 @@ Use an evidence hierarchy:
 **Tier 4:** the contributor's own observed portfolio outcomes, used for personalization but not as proof of the general market.
 
 Never present an unsupported claim such as “this is the most requested photo” or “this will sell.” Adobe trend collections are directional signals, not public sales rankings. Explicitly distinguish **documented demand signal**, **commercial hypothesis**, **portfolio evidence**, and **unknown**.
+
+## Neutral topic selection rule
+
+No category is the repository default.
+
+A trend mention is a signal, not an instruction to generate that subject.
+
+For an unspecified request such as **“create an image”**, the agent must first use `skills/OPPORTUNITY_SELECTION_ENGINE.md` and compare a diverse opportunity pool. Fitness, wellness, business, technology, food, travel, sustainability, family, education, finance, lifestyle, culture, science, healthcare, home, industry and other categories compete on evidence, buyer utility, saturation, differentiation, seasonality, portfolio gap, production reliability and legal/QC risk.
+
+Do not select fitness merely because the repository or an Adobe trend page mentions fitness. Do not select any other recurring repository topic for the same reason.
+
+The system must not fabricate a market ranking. If evidence does not distinguish candidates sufficiently, mark the relevant dimensions `UNKNOWN` and choose conservatively rather than pretending certainty.
 
 ## Candidate decision model
 
