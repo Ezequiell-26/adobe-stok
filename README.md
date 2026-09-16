@@ -1,34 +1,98 @@
-# Adobe Stock AI Image System
+# Adobe Stock AI Production OS
 
-Sistema operativo para crear, revisar y preparar contenido generado con IA para Adobe Stock.
+Sistema operativo **local-first y repo-first** para que un agente de IA pueda crear activos fotográficos comerciales para Adobe Stock con un proceso reproducible de: investigación → selección de concepto → generación → inspección → corrección → metadata → licencia → preflight → registro.
 
-> **Importante:** ningún prompt puede garantizar que Adobe Stock apruebe una imagen. La aprobación depende de la revisión de Adobe y de las políticas vigentes. Este repositorio busca reducir rechazos mediante generación controlada, revisión técnica, IP/legal, metadata y control de similitud.
+## LA REGLA DE ARRANQUE
 
-## Objetivo
+Cuando este repositorio se entregue a un GPT/agent en un chat nuevo y el usuario diga únicamente:
 
-Flujo:
+> **Lee este repo.**
 
-`idea comercial -> preflight -> prompt -> generación -> inspección 100% -> corrección/regeneración -> metadata -> revisión de licencia -> portal Adobe -> moderación -> registro`
+el agente debe tratar este repositorio como su **manual operativo principal** y continuar de forma autónoma. No debe limitarse a resumir archivos.
 
-## Estructura
+Debe leer en este orden:
 
-- `prompts/MASTER_GPT_IMAGE_SYSTEM.md` — sistema maestro para GPT.
-- `prompts/IMAGE_GENERATION_PROMPT_TEMPLATE.md` — plantilla de generación.
-- `prompts/IMAGE_QC_REVIEW_PROMPT.md` — auditoría visual/técnica antes de subir.
-- `templates/ADOBE_METADATA_TEMPLATE.md` — metadata.
-- `templates/SUBMISSION_RECORD.md` — registro por asset.
-- `rules/ADOBE_RULES.md` — reglas operativas consolidadas.
-- `rules/PLATFORM_MATRIX.md` — qué plataformas usar con IA.
-- `rules/REJECTION_GATES.md` — gates de bloqueo.
+1. `AGENT_BOOTSTRAP.md` — protocolo obligatorio de inicio y comportamiento autónomo.
+2. `memory/CORE_MEMORY.md` — memoria persistente del sistema.
+3. `prompts/MASTER_GPT_IMAGE_SYSTEM.md` — sistema maestro de producción.
+4. `skills/STOCK_DEMAND_RESEARCH.md` — cómo decidir qué imagen producir actualmente.
+5. `skills/PRO_PHOTOGRAPHY.md` — dirección fotográfica profesional.
+6. `skills/AI_ARTIFACT_QC.md` — inspección visual estricta.
+7. `skills/LEGAL_IP_LICENSE.md` — propiedad intelectual, releases y licencias.
+8. `skills/METADATA_AND_SUBMISSION.md` — título, keywords, categoría y portal.
+9. `rules/ADOBE_RULES.md` — requisitos consolidados de Adobe.
+10. `rules/REJECTION_GATES.md` — gates de bloqueo.
+11. `rules/PLATFORM_MATRIX.md` — destino de plataformas.
+12. `templates/` — formatos de entrega y registro.
 
-## Regla principal
+Si el agente tiene acceso web, debe **verificar las fuentes oficiales actuales antes de decidir demanda/tendencias o realizar un lote grande**. Este repositorio no debe congelar una afirmación como “la foto más vendida” sin evidencia actual.
 
-**No subir automáticamente.** Una imagen solo entra en `READY_TO_UPLOAD` cuando pasa todos los gates y no tiene dudas legales, técnicas o de calidad.
+## OBJETIVO
 
-## Fecha de referencia
+No perseguimos “una imagen bonita”. Producimos **stock profesional, útil, diferenciable y comercialmente reutilizable**, minimizando riesgos de:
 
-17 de septiembre de 2026.
+- rechazo por calidad técnica;
+- anomalías generativas;
+- propiedad intelectual;
+- metadata incorrecta;
+- falta de releases;
+- spam o contenido demasiado similar;
+- licencias insuficientes del generador;
+- elección de temas sin demanda o excesivamente saturados.
 
-## Fuentes
+## PIPELINE CANÓNICO
 
-Ver `rules/ADOBE_RULES.md` y `rules/PLATFORM_MATRIX.md`. Verificar siempre las páginas oficiales antes de operaciones masivas porque las políticas pueden cambiar.
+`RESEARCH → DEMAND SCORE → CONCEPT GATE → CREATIVE BRIEF → GENERATION PROMPT → GENERATION → 100% QC → REGEN/FIX → TECHNICAL EXPORT → LEGAL/LICENSE QC → METADATA → PORTAL PREFLIGHT → READY_TO_UPLOAD`
+
+## PRINCIPIOS NO NEGOCIABLES
+
+1. **Nunca garantizar aprobación.** Adobe Stock toma la decisión final de moderación.
+2. **Nunca confundir 4 MP con 4 MB.** Para fotos, la referencia actual es 4–100 MP y máximo 45 MB; JPEG sRGB. El tamaño de archivo no tiene un mínimo de 4 MB.
+3. **Nunca inventar demanda.** Las tendencias son señales; no equivalen automáticamente a ventas.
+4. **Investigar antes de generar** cuando se dispone de web: tendencias oficiales, categorías destacadas, necesidades comerciales y saturación observable.
+5. **Preferir conceptos diferenciados** sobre 20 variaciones casi iguales.
+6. **Inspeccionar el archivo final**, no solamente la vista previa del generador.
+7. **Ante una duda legal o de licencia: HOLD.** Nunca racionalizarla.
+8. **Metadata basada en lo visible.** Sin keyword stuffing.
+9. **Marcar IA generativa cuando corresponda.**
+10. **Una imagen con un defecto material no pasa a READY_TO_UPLOAD.**
+
+## ESTADO DE REFERENCIA
+
+Reference date: 2026-09-17.
+
+Las políticas de Adobe pueden cambiar. El agente debe priorizar la fuente oficial más reciente sobre cualquier texto histórico del repositorio.
+
+## FUENTES OFICIALES PRINCIPALES
+
+- Adobe Stock account/submission guidelines
+- Adobe Stock generative AI guidelines and FAQ
+- Adobe Stock generative AI photo submission guidelines
+- Adobe Stock technical/legal photo requirements
+- Adobe Stock common refusal reasons
+- Adobe Stock distinct generative AI submission best practices
+- Adobe Stock creative trends / curated collections
+
+URLs oficiales y procedimiento de verificación: `research/OFFICIAL_SOURCES.md`.
+
+## RESULTADO ESPERADO DE CADA EJECUCIÓN
+
+El agente debe ser capaz de producir:
+
+- concepto elegido y justificación basada en señales actuales;
+- brief fotográfico profesional;
+- prompt de generación listo para usar;
+- negative constraints;
+- checklist de inspección 100%;
+- decisión `READY_TO_UPLOAD`, `REJECTED_NEEDS_FIX`, `HOLD_FOR_LEGAL_REVIEW` o `HOLD_FOR_LICENSE_REVIEW`;
+- dimensiones y especificaciones técnicas;
+- título en inglés;
+- keywords relevantes y ordenadas;
+- categoría;
+- disclosure de IA;
+- notas de releases/licencia;
+- registro reproducible del asset.
+
+## IMPORTANTE
+
+Este repositorio **reduce riesgos y sistematiza el proceso**, pero no puede convertir un activo en una aprobación garantizada. El objetivo es que el agente entregue únicamente activos que, con la evidencia disponible, hayan superado todos los controles internos y estén razonablemente preparados para la revisión humana de Adobe.
