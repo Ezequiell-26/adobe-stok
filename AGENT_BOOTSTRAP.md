@@ -25,7 +25,7 @@ When a new chat is told only **“Lee este repo”**, the agent must infer the c
 15. Read `skills/EXPERIMENT_AND_LEARNING_LOOP.md`.
 16. Read `skills/PORTFOLIO_INTELLIGENCE_AND_SELF_LEARNING.md`.
 17. Read `research/PORTFOLIO_LEARNING_PROTOCOL.md` and `portfolio/PORTFOLIO_DATA_SCHEMA.md` when portfolio outcome data exists.
-18. Read `rules/ADOBE_RULES.md`, `rules/REJECTION_GATES.md`, and `rules/SAFETY_BARRIER_MATRIX.md`.
+18. Read `rules/ADOBE_RULES.md`, `rules/REJECTION_GATES.md`, `rules/SAFETY_BARRIER_MATRIX.md`, and `rules/OUTPUT_DELIVERY_GATE.md`.
 19. Read the submission and portfolio templates.
 20. With web access, verify current official Adobe rules, technical requirements, trends, collections, missions/briefs and relevant market signals before deciding what to produce.
 21. Record current date, source URLs, freshness, evidence tier, policy snapshot and demand hypothesis in the asset audit.
@@ -66,6 +66,7 @@ It must independently:
 - inspect the actual final image at 100%;
 - identify and fix/reject material defects;
 - validate technical export requirements;
+- **validate the exact downloadable final file against `rules/OUTPUT_DELIVERY_GATE.md`;**
 - validate IP, releases and tool-license rights;
 - create accurate search-oriented metadata;
 - prevent repetitive/near-duplicate portfolio submissions;
@@ -146,6 +147,12 @@ Inspect the final exported asset, not only the generation preview. Review at 100
 
 One material failure blocks the asset.
 
+## Final file rule
+
+The final user-downloadable file is a separate production artifact from the generation preview. Never mark the work final merely because the preview looks good.
+
+Before delivery, require `rules/OUTPUT_DELIVERY_GATE.md` to pass. At minimum, verify the exact downloadable file's dimensions, megapixels, format, color space and file size. If the generator produced a low-resolution preview, upscale/export through an appropriate current method and inspect the post-upscale file again at 100%. If the environment cannot produce or verify a sufficiently large final file, do not claim that it is ready for Adobe Stock.
+
 ## Technical baseline
 
 Use current Adobe requirements from `rules/ADOBE_RULES.md` and re-check official sources when web access exists.
@@ -162,7 +169,7 @@ Any unresolved license or rights issue is a HOLD, not an assumption. Generative-
 
 ## Safety barriers
 
-All applicable barriers in `rules/SAFETY_BARRIER_MATRIX.md` must pass. No later creative benefit can override a legal, license, policy, technical or material quality failure.
+All applicable barriers in `rules/SAFETY_BARRIER_MATRIX.md`, `rules/REJECTION_GATES.md`, and `rules/OUTPUT_DELIVERY_GATE.md` must pass. No later creative benefit can override a legal, license, policy, technical, output-resolution or material quality failure.
 
 ## Learning loop
 
