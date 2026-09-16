@@ -54,36 +54,65 @@ Never override a current official Adobe rule with a memory, old blog post, socia
 
 ---
 
-## 3. DEMAND DECISION ENGINE
+## 3. OPPORTUNITY SELECTION — NO DEFAULT TOPIC
+
+The agent selects an **opportunity**, not a favorite category.
+
+Before generating an image for an unspecified request such as “create an image”, it is mandatory to read and apply `skills/OPPORTUNITY_SELECTION_ENGINE.md`.
+
+No category is privileged. Fitness, wellness, business, technology, food, travel, sustainability, family, education, finance, lifestyle, culture, science, healthcare, home, industry and other categories must compete on current evidence and commercial utility.
+
+A trend mention is **evidence, not an instruction**. The fact that Adobe highlights a theme does not prove it is the highest-demand category, the best opportunity for this contributor, the least saturated option, or a reason to generate it automatically.
+
+For a generic request:
+
+1. research current evidence;
+2. build a diverse opportunity pool across category families when enough evidence exists;
+3. compare at least 3 materially different concepts, preferably 5 when evidence permits;
+4. evaluate buyer utility, search clarity, differentiation, saturation, seasonality, portfolio gap, production reliability, legal complexity, QC risk and multi-use value;
+5. run the category-bias check;
+6. only then select the concept.
+
+Do not choose a concept merely because the repository mentions it repeatedly. Do not select fitness merely because fitness appears in an Adobe trend or cultural-insights source.
+
+The correct decision pattern is:
+
+`RESEARCH → OPPORTUNITY POOL → BUYER USE CASE → SATURATION/GAP → COMPARISON → CATEGORY-BIAS CHECK → CONCEPT GATE → GENERATION`
+
+Never fabricate rankings, search volume, downloads, revenue, conversion rates, bestseller status, “most requested” claims, sales probabilities or approval probabilities. Unknown evidence remains `UNKNOWN`.
+
+---
+
+## 4. DEMAND DECISION ENGINE
 
 Before choosing a concept, ask internally:
 
 - What does Adobe currently highlight?
-- What cultural/commercial themes are currently relevant?
+- What current buyer/commercial signals exist across multiple categories?
 - What buyer use case does the image solve?
 - Is the concept commercially understandable in one glance?
 - Is it visually differentiated enough from generic AI stock?
 - Is it likely to be overcrowded with near-identical AI submissions?
 - Can it be created without unnecessary IP/release complexity?
 - Can one strong asset serve multiple buyer contexts?
+- Does the contributor's portfolio show a genuine gap?
 
-Never state that a subject is “the most requested” unless reliable, current evidence actually supports that exact statement.
-
-Instead use evidence labels:
+Use evidence labels:
 
 - **OFFICIAL_TREND** — explicitly highlighted by Adobe;
 - **MARKET_SIGNAL** — supported by current marketplace/search/category evidence;
+- **PORTFOLIO_EVIDENCE** — supported by the contributor's own measured outcomes;
 - **COMMERCIAL_LOGIC** — a reasoned buyer-use-case hypothesis;
-- **SATURATION_RISK** — evidence that the concept is crowded;
+- **SATURATION_RISK** — evidence or strong indication that the concept is crowded;
 - **UNKNOWN** — insufficient evidence.
 
-Choose the concept with the best combined commercial usefulness, evidence quality, differentiation and production safety, not simply the trend with the loudest wording.
+Choose the concept with the strongest combined commercial usefulness, evidence quality, differentiation and production safety, not simply the trend with the loudest wording.
 
-Default current 2026 trend baseline is documented in `skills/STOCK_DEMAND_RESEARCH.md` and must be refreshed when the official Adobe pages change.
+Default 2026 trend material documented elsewhere in the repository is historical context and must be refreshed when official Adobe sources change.
 
 ---
 
-## 4. CONCEPT GATE
+## 5. CONCEPT GATE
 
 BLOCK or redesign concepts that depend on:
 
@@ -104,7 +133,7 @@ Prefer original generic subjects, fictional people when appropriate, generic unb
 
 ---
 
-## 5. PROFESSIONAL PHOTO BRIEF
+## 6. PROFESSIONAL PHOTO BRIEF
 
 Every selected concept must be translated into:
 
@@ -137,7 +166,7 @@ The brief must describe a plausible photograph, not generic “cinematic AI art�
 
 ---
 
-## 6. PROFESSIONAL PHOTOGRAPHY STANDARD
+## 7. PROFESSIONAL PHOTOGRAPHY STANDARD
 
 Unless the concept calls for an alternative treatment, target:
 
@@ -164,7 +193,7 @@ Avoid prompt language that creates a style imitation or references a living arti
 
 ---
 
-## 7. PEOPLE
+## 8. PEOPLE
 
 Use people only when they add clear commercial value.
 
@@ -189,7 +218,7 @@ If an identifiable person is intentionally represented, stop and verify rights/r
 
 ---
 
-## 8. OBJECTS / PRODUCTS
+## 9. OBJECTS / PRODUCTS
 
 Objects must be physically plausible and manufacturable.
 
@@ -215,7 +244,7 @@ Use generic unbranded products by default.
 
 ---
 
-## 9. UNIVERSAL NEGATIVE CONSTRAINTS
+## 10. UNIVERSAL NEGATIVE CONSTRAINTS
 
 Unless a concept genuinely requires an exception:
 
@@ -225,7 +254,7 @@ Do not blindly force “no text” when the concept requires legitimate generic 
 
 ---
 
-## 10. COMMERCIAL COMPOSITION
+## 11. COMMERCIAL COMPOSITION
 
 Optimize for actual design use, not only visual spectacle.
 
@@ -246,7 +275,7 @@ Do not create ten trivial variants. Material differences should change the conce
 
 ---
 
-## 11. GENERATION STRATEGY
+## 12. GENERATION STRATEGY
 
 When a generation tool allows multiple candidates:
 
@@ -261,7 +290,7 @@ The objective is **curation quality**, not maximum output count.
 
 ---
 
-## 12. TECHNICAL EXPORT GATE
+## 13. TECHNICAL EXPORT GATE
 
 For Adobe Stock photo submission, validate the **final exported file**:
 
@@ -287,9 +316,11 @@ Examples:
 
 Do not enlarge merely to hit a number if upscaling creates artifacts. Prefer a clean, genuinely detailed final image.
 
+The exact downloadable final file must also pass `rules/OUTPUT_DELIVERY_GATE.md`. A preview or thumbnail is never a valid substitute for the final asset.
+
 ---
 
-## 13. 100% QC
+## 14. 100% QC
 
 Inspect the final exported asset, not only the generator preview.
 
@@ -321,7 +352,7 @@ Any material defect means `REJECTED_NEEDS_FIX`.
 
 ---
 
-## 14. LEGAL + LICENSE QC
+## 15. LEGAL + LICENSE QC
 
 Run separately from visual QC.
 
@@ -341,7 +372,7 @@ Any unresolved legal/licensing question = HOLD.
 
 ---
 
-## 15. METADATA
+## 16. METADATA
 
 Create metadata only from the actual image.
 
@@ -368,13 +399,13 @@ Choose the category that best reflects the actual image content.
 
 ---
 
-## 16. AI DISCLOSURE
+## 17. AI DISCLOSURE
 
 For generative-AI content, the Adobe Contributor Portal workflow must identify the content as created with generative AI when applicable. If fictional people/property are relevant under Adobe's current workflow, select the corresponding disclosure. Use only the labels that accurately describe the asset.
 
 ---
 
-## 17. SIMILARITY / PORTFOLIO CONTROL
+## 18. SIMILARITY / PORTFOLIO CONTROL
 
 Adobe can refuse overly similar generative submissions. Never treat flipping, rotating, color changes, tiny crops or trivial filters as meaningful new concepts.
 
@@ -392,7 +423,7 @@ For a batch, maintain an internal similarity ledger and cap near-identical varia
 
 ---
 
-## 18. FINAL STATES
+## 19. FINAL STATES
 
 Return exactly one final state:
 
@@ -401,17 +432,20 @@ Return exactly one final state:
 `HOLD_FOR_LEGAL_REVIEW`
 `HOLD_FOR_LICENSE_REVIEW`
 
-READY requires every mandatory gate to pass.
+READY requires every mandatory gate to pass, including the exact downloadable-file delivery gate.
 
 ---
 
-## 19. FINAL OUTPUT
+## 20. FINAL OUTPUT
 
 ### 1. Demand research
-- selected theme
+- selected category/theme
+- candidate pool considered
 - evidence labels
 - commercial use case
 - saturation risk
+- differentiation gap
+- category-bias check
 
 ### 2. Concept
 One sentence.
