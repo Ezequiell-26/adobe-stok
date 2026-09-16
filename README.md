@@ -29,7 +29,7 @@ el agente debe tratarlo como su **manual operativo principal** y continuar de fo
 15. `skills/CHAT_OUTPUT_PROTOCOL.md` — formato de ejecución.
 16. `research/OFFICIAL_SOURCES.md` — fuentes de verificación.
 17. `research/DEMAND_SNAPSHOT_2026-09-17.md` — snapshot histórico de señales actuales.
-18. `rules/ADOBE_RULES.md`, `rules/REJECTION_GATES.md`, `rules/PLATFORM_MATRIX.md`.
+18. `rules/ADOBE_RULES.md`, `rules/REJECTION_GATES.md`, `rules/SAFETY_BARRIER_MATRIX.md`, `rules/OUTPUT_DELIVERY_GATE.md`.
 19. `templates/` — metadata y submission record.
 
 ## OBJETIVO
@@ -61,7 +61,7 @@ Las tendencias de Adobe son señales editoriales/curatoriales, no un ranking pú
 
 ## PIPELINE CANÓNICO
 
-`LIVE RESEARCH → SIGNAL EXTRACTION → BUYER INTENT → 3+ CANDIDATES → DIFFERENTIATION GAP → CONCEPT GATE → PHOTO BRIEF → GENERATION ENGINEERING → GENERATE → 100% QC → FIX/REGENERATE → TECHNICAL EXPORT → LEGAL/LICENSE QC → METADATA SEO → PORTAL PREFLIGHT → PORTFOLIO CHECK → READY_TO_UPLOAD`
+`LIVE RESEARCH → SIGNAL EXTRACTION → BUYER INTENT → 3+ CANDIDATES → DIFFERENTIATION GAP → CONCEPT GATE → PHOTO BRIEF → GENERATION ENGINEERING → GENERATE → UPSCALE/EXPORT → OUTPUT DELIVERY GATE → 100% QC → FIX/REGENERATE → TECHNICAL EXPORT → LEGAL/LICENSE QC → METADATA SEO → PORTAL PREFLIGHT → PORTFOLIO CHECK → READY_TO_UPLOAD`
 
 ## ESTRATEGIA DE COMPETENCIA
 
@@ -78,7 +78,7 @@ La ventaja no se obtiene copiando a otros colaboradores ni generando 100 variant
 - metadata limpia y orientada a búsqueda;
 - portfolio con huecos cubiertos y poca redundancia.
 
-Adobe recomienda diversificar conceptos, curar outputs y evitar variaciones casi idénticas porque la similitud puede provocar rechazo y reducir la visibilidad. citehttps://helpx.adobe.com/stock/contributor/submit-your-content/submit-generative-ai-content/distinct-generative-ai-submission-best-practices.html
+Adobe recomienda diversificar conceptos, curar outputs y evitar variaciones casi idénticas porque la similitud puede provocar rechazo y reducir la visibilidad.
 
 ## PRINCIPIOS NO NEGOCIABLES
 
@@ -88,12 +88,13 @@ Adobe recomienda diversificar conceptos, curar outputs y evitar variaciones casi
 4. **Investigar antes de generar** cuando existe web.
 5. **No competir mediante spam.** Cada envío debe aportar valor distintivo.
 6. **Inspeccionar el archivo final al 100%.**
-7. **Ante dudas legales o de licencia: HOLD.**
-8. **Metadata basada estrictamente en lo visible y buscable.**
-9. **Etiquetar IA generativa cuando corresponda.**
-10. **Cualquier defecto material bloquea READY_TO_UPLOAD.**
-11. **Registrar resultados** para que la estrategia mejore con evidencia real.
-12. **Nunca imitar portfolios, campañas, artistas, marcas, personajes o trabajos protegidos.**
+7. **El archivo descargable debe pasar `OUTPUT_DELIVERY_GATE`.** Una preview de baja resolución nunca se considera el asset final.
+8. **Ante dudas legales o de licencia: HOLD.**
+9. **Metadata basada estrictamente en lo visible y buscable.**
+10. **Etiquetar IA generativa cuando corresponda.**
+11. **Cualquier defecto material bloquea READY_TO_UPLOAD.**
+12. **Registrar resultados** para que la estrategia mejore con evidencia real.
+13. **Nunca imitar portfolios, campañas, artistas, marcas, personajes o trabajos protegidos.**
 
 ## ESTADO DE REFERENCIA
 
@@ -103,7 +104,7 @@ Las políticas y tendencias son volátiles. El agente debe priorizar siempre las
 
 ## FUENTES
 
-Las URLs oficiales están centralizadas en `research/OFFICIAL_SOURCES.md`. Las reglas actuales de Adobe confirman que los contenidos generados con IA deben etiquetarse correctamente, cumplir derechos/licencias y evitar anomalías, IP y metadata problemática. citehttps://helpx.adobe.com/es/stock/contributor/submit-your-content/submit-generative-ai-content/generative-ai-content-guidelines.html
+Las URLs oficiales están centralizadas en `research/OFFICIAL_SOURCES.md`.
 
 ## RESULTADO ESPERADO
 
@@ -117,6 +118,7 @@ Cada ejecución debe poder producir, según el estado:
 - brief fotográfico profesional;
 - prompt de generación;
 - negative constraints;
+- archivo final validado por resolución y exportación;
 - QC 100%;
 - especificaciones técnicas;
 - title/keywords/category;
@@ -128,4 +130,4 @@ Cada ejecución debe poder producir, según el estado:
 
 ## LIMITACIÓN DEL SISTEMA
 
-Este repositorio **no convierte la moderación ni las ventas en algo determinista**. Su función es elevar sistemáticamente la calidad, relevancia, diferenciación, discoverability y preparación comercial de cada asset con la mejor evidencia disponible.
+Este repositorio **reduce riesgos y sistematiza el proceso**, pero no puede convertir la moderación ni las ventas en algo determinista. Su función es elevar sistemáticamente la calidad, relevancia, diferenciación, discoverability y preparación comercial de cada asset con la mejor evidencia disponible.
