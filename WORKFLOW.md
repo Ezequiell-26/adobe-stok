@@ -8,63 +8,77 @@ New chat + repository + “lee este repo”.
 
 Read the repository in the prescribed order. Internalize its rules before generating.
 
-## Phase 2 — Current intelligence
+## Phase 2 — Freshness lock
 
-Check current official Adobe rules and current trend/collection signals. Build a small candidate set instead of immediately picking the first obvious idea.
+Establish the current date. Re-check current official Adobe policies and any time-sensitive requirements. Never let an old repository snapshot override a newer official source.
 
-## Phase 3 — Candidate selection
+## Phase 3 — Current market intelligence
+
+Run `skills/AUTOMATION_ORCHESTRATOR.md`, `skills/LIVE_RESEARCH_PLAYBOOK.md`, `skills/DEMAND_EVIDENCE_MATRIX.md`, and `skills/SEASONAL_PLANNING.md`.
+
+Build a candidate set instead of immediately picking the first obvious idea. Use evidence hierarchy and clearly separate verified facts, market observations, hypotheses, and unknowns.
+
+## Phase 4 — Opportunity selection
 
 For each candidate:
 
-`evidence → buyer use case → saturation → differentiation → IP/release safety → visual feasibility`
+`evidence → buyer use case → timing → saturation proxy → differentiation → IP/release safety → visual feasibility → portfolio fit`
 
-Reject concepts that rely on risky IP or cannot be visually differentiated.
+Select the concept with the strongest evidence-backed commercial case. Do not claim a sales probability unless direct, current data supports it.
 
-## Phase 4 — Creative brief
+## Phase 5 — Creative brief
 
-Describe the exact photograph before writing the generation prompt.
+Describe the exact photograph before writing the generation prompt. Design for professional buyer use, crop tolerance, copy space, visual hierarchy and realistic physical behavior.
 
-## Phase 5 — Generation
+## Phase 6 — Generation engineering
 
-Use a concise production prompt. Do not rely on an enormous adjective list. Keep camera, lighting, physics and composition internally coherent.
+Use `skills/IMAGE_GENERATION_ENGINEERING.md` and the master prompt. Keep camera, lighting, materials, perspective, depth and composition internally coherent. Do not hide defects behind adjective-heavy prompting.
 
-## Phase 6 — Curation
+## Phase 7 — Generation + curation
 
-Discard weak or generic candidates. The best-looking thumbnail is not automatically the best stock asset.
+Generate candidates as necessary. Discard weak, generic, unsafe, defective or redundant outputs. Do not submit large batches simply because generation is cheap.
 
-## Phase 7 — 100% inspection
+Adobe's current guidance says similar generative-AI submissions can be refused as spam; curate selectively and prioritize meaningful variation. Re-check the current official limit/definition before batch submission.
 
-Inspect every high-risk region. Any material artifact blocks submission.
+## Phase 8 — 100% inspection
 
-## Phase 8 — Technical export
+Inspect the actual final export, not merely the thumbnail. Check anatomy, faces, hands, eyes, teeth, ears, geometry, materials, physics, lighting, shadows, reflections, text, branding, noise, banding, sharpening, halos, compositional integrity and commercial usability.
 
-Verify final JPEG, sRGB, 4–100 MP, ≤45 MB and image quality. Remember: megapixels are not megabytes.
+Any material artifact blocks submission.
 
-## Phase 9 — Legal/license
+## Phase 9 — Technical export
 
-Verify generator commercial-stock rights and required releases. HOLD anything unresolved.
+Verify current Adobe requirements. Repository baseline: JPEG, sRGB, 4–100 MP, ≤45 MB. Remember: megapixels are not megabytes. Prefer a technically strong file over artificially inflating file size.
 
-## Phase 10 — Metadata
+## Phase 10 — Legal/license
 
-Create truthful English title, prioritized keywords and category from the actual image.
+Verify generator commercial-stock rights, model/property release requirements, AI disclosure requirements and third-party IP safety. HOLD anything unresolved.
 
-## Phase 11 — Portal preflight
+## Phase 11 — Metadata/search
 
-Verify generative-AI disclosure and fictional-person/property disclosure where applicable.
+Create truthful English title, prioritized keywords and category from the actual image. Keep metadata relevant, avoid IP bait, and optimize for real buyer search intent.
 
-## Phase 12 — Final state
+Adobe's current guidance says keywords can be up to 49 per submission and keyword order matters; the agent must check the current official metadata guidance during fresh research. 
+
+## Phase 12 — Portfolio/similarity gate
+
+Compare against assets already generated/submitted when that information is available. Reject near-duplicate concepts, trivial crop/color variants, and repetitive batches. Prefer genuinely different concepts/use cases.
+
+## Phase 13 — Final state
 
 `READY_TO_UPLOAD` only when every mandatory gate passes.
 
-## Phase 13 — Record
+## Phase 14 — Record + learning loop
 
-Save the production record using `templates/SUBMISSION_RECORD.md`.
+Save a production record containing research evidence, source freshness, concept rationale, prompt version, generator/license, technical results, QC, metadata, and outcome.
 
-## Refusal learning
+When Adobe provides a refusal reason or the user provides sales/download data:
+- preserve the exact evidence;
+- classify the signal;
+- avoid overfitting to one asset;
+- update heuristics only when evidence accumulates;
+- preserve old rules as historical context when replacing them.
 
-After any Adobe refusal:
+## Safety boundary
 
-- preserve the exact refusal reason;
-- classify it as technical, quality, legal/IP, metadata, AI anomaly, similarity, release or other;
-- update the system only when supported by the refusal and/or Adobe documentation;
-- never convert a single anecdote into an unsupported universal rule.
+The repository can research, plan, generate, audit, prepare metadata and maintain records. It must not automatically perform an external account action or upload unless explicitly authorized and technically supported.
