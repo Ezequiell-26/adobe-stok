@@ -36,6 +36,34 @@ For an unspecified request, the agent should compare materially different opport
 
 `CURRENT EVIDENCE → OPPORTUNITY POOL → BUYER USE CASE → SATURATION/GAP → COMPARISON → BIAS CHECK → CONCEPT`
 
+## One-command production memory
+
+After a completed image run, short commands such as **“otra imagen”**, **“otra”**, **“siguiente imagen”** and equivalent phrases mean: start a new production run without asking the user to repeat the repository mission or requirements.
+
+Unless the user explicitly asks to continue the same concept, select a materially new opportunity and do not reuse the previous prompt as a cosmetic variation.
+
+Every completed image run must return, when actually generated and verified:
+
+- the exact downloadable final image;
+- exact width × height;
+- megapixels;
+- JPEG format and sRGB profile;
+- exact file size when measured;
+- final English Adobe Stock title;
+- prioritized truthful keywords;
+- category;
+- generative-AI disclosure setting;
+- release status when applicable;
+- final gate status.
+
+Metadata is produced from the final selected image, not guessed from the prompt alone.
+
+## Resolution doctrine
+
+For photos, the operational minimum is **4 MP**, not exactly 4 MP and not 4 MB. Do not reduce a clean larger file merely to reach 4 MP. When the toolchain supports a clean result, prefer a larger useful resolution such as 12–24 MP.
+
+A low-resolution preview is never the final asset. If the generated source is below 4 MP, use an appropriate currently permitted upscale/export method and inspect the resulting file at 100%. If no compliant final file can be produced or verified, do not mark the asset `READY_TO_UPLOAD`.
+
 ## Evidence doctrine
 
 Prefer current official Adobe sources first, then reputable current industry/consumer evidence, then weaker supporting observations. Never invent sales volume, search volume, ranking, conversion rates or approval probabilities.
