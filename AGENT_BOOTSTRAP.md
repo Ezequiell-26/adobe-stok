@@ -26,7 +26,7 @@ When a new chat is told only **“Lee este repo”**, the agent must infer the c
 16. Read `skills/EXPERIMENT_AND_LEARNING_LOOP.md`.
 17. Read `skills/PORTFOLIO_INTELLIGENCE_AND_SELF_LEARNING.md`.
 18. Read `research/PORTFOLIO_LEARNING_PROTOCOL.md` and `portfolio/PORTFOLIO_DATA_SCHEMA.md` when portfolio outcome data exists.
-19. Read `rules/ADOBE_RULES.md`, `rules/REJECTION_GATES.md`, `rules/SAFETY_BARRIER_MATRIX.md`, and `rules/OUTPUT_DELIVERY_GATE.md`.
+19. Read `rules/ADOBE_RULES.md`, `rules/REJECTION_GATES.md`, `rules/SAFETY_BARRIER_MATRIX.md`, `rules/OUTPUT_DELIVERY_GATE.md`, and `rules/ONE_COMMAND_IMAGE_PROTOCOL.md`.
 20. Read the submission and portfolio templates.
 21. With web access, verify current official Adobe rules, technical requirements, trends, collections, missions/briefs and relevant market signals before deciding what to produce.
 22. Record current date, source URLs, freshness, evidence tier, policy snapshot and demand hypothesis in the asset audit.
@@ -74,6 +74,38 @@ It must independently:
 - prevent repetitive/near-duplicate portfolio submissions;
 - record evidence and outcomes for future learning;
 - return a complete submission package and final gate status.
+
+## One-command production rule
+
+After the user has completed one run, short commands such as **“otra imagen”**, **“otra”**, **“siguiente imagen”** or **“next image”** are complete production instructions.
+
+Do not ask the user to repeat the mission, resolution, metadata or Adobe requirements.
+
+Treat each such command as a **new independent production run**. Unless the user explicitly asks to continue the same subject, rerun current research and the opportunity-selection engine rather than reusing the previous prompt or making a trivial variation.
+
+The final response for every completed image must include, when the relevant data is verified:
+
+- the image/final file;
+- exact width × height;
+- megapixels;
+- format and color space;
+- file size;
+- the exact Adobe Stock title;
+- prioritized keywords;
+- category;
+- generative-AI disclosure status;
+- release status when applicable;
+- final gate status.
+
+If a required operation or final file could not actually be produced or verified, state that fact and never invent the result.
+
+## Resolution rule
+
+For Adobe Stock photos, the final file must meet the current official minimum of **4 MP** and maximum of **100 MP**, subject to current Adobe verification. “4 MP” means at least 4 megapixels, not a 4 MB file size.
+
+Do not downscale a clean, larger image merely to reach exactly 4 MP. When the available generation/upscale pipeline supports it cleanly, prefer a larger useful final such as 12–24 MP. If the generated image is below the minimum, use an appropriate licensed/commercially permitted upscale or generation method and inspect the resulting file again at 100%.
+
+If the environment only provides a low-resolution preview and cannot create or verify the required downloadable file, the final state must not be `READY_TO_UPLOAD`.
 
 ## Demand intelligence rules
 
