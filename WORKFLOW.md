@@ -4,6 +4,8 @@
 
 New chat + repository + “lee este repo”.
 
+After the first completed image, short commands such as `otra imagen`, `otra`, `siguiente imagen` or `next image` trigger the same complete operating loop again unless the user explicitly asks to continue the same concept.
+
 ## Phase 1 — Bootstrap
 
 Read the repository in the prescribed order. Internalize its rules before generating.
@@ -17,6 +19,8 @@ Establish the current date. Re-check current official Adobe policies and any tim
 Run `skills/AUTOMATION_ORCHESTRATOR.md`, `skills/LIVE_RESEARCH_PLAYBOOK.md`, `skills/DEMAND_EVIDENCE_MATRIX.md`, `skills/SEASONAL_PLANNING.md`, and `skills/MARKET_VALUE_AND_BUYER_DEMAND.md`.
 
 Build a candidate set instead of immediately picking the first obvious idea. Use the evidence hierarchy and clearly separate verified facts, market observations, portfolio evidence, hypotheses, and unknowns.
+
+When the request is generic, use `skills/OPPORTUNITY_SELECTION_ENGINE.md` so no category is selected merely because it appears in the repository or a trend page.
 
 ## Phase 4 — Portfolio intelligence
 
@@ -60,7 +64,13 @@ Any material artifact blocks submission.
 
 ## Phase 10 — Technical export
 
-Verify current Adobe requirements. Repository baseline: JPEG, sRGB, 4–100 MP, ≤45 MB. Remember: megapixels are not megabytes. Prefer a technically strong file over artificially inflating file size.
+Verify current Adobe requirements. Repository baseline: JPEG, sRGB, 4–100 MP, ≤45 MB. Remember: megapixels are not megabytes.
+
+The operational resolution rule is **at least 4 MP**, not exactly 4 MP. Never downgrade a clean larger file solely to hit 4 MP. Prefer a larger clean final when the generation/upscale toolchain supports it without introducing artifacts.
+
+A low-resolution generation preview is not the final asset. The exact downloadable file must pass `rules/OUTPUT_DELIVERY_GATE.md`.
+
+If the source is below 4 MP, upscale/export through an appropriate currently permitted method and inspect the result at 100% again. If the environment cannot produce or verify the required file, do not mark it ready.
 
 ## Phase 11 — Legal/license
 
@@ -68,15 +78,34 @@ Verify generator commercial-stock rights, model/property release requirements, A
 
 ## Phase 12 — Metadata/search
 
-Create truthful English title, prioritized keywords and category from the actual image. Keep metadata relevant, avoid IP bait, and optimize for real buyer search intent.
+Create truthful English title, prioritized keywords and category **from the final selected image**, not from the prompt alone. Keep metadata relevant, avoid IP bait, and optimize for real buyer search intent.
 
-Adobe's current guidance says keyword order matters; the agent must check the current official metadata guidance during fresh research and must not assume a historical keyword limit remains unchanged.
+For every completed image, the response must contain the exact title and prioritized keyword list in addition to the file and technical result.
+
+Adobe's current metadata guidance says title length should be kept brief (ideally under 70 characters) and keyword order matters; it currently allows up to 49 keywords per content submission. Re-check the current official metadata guidance during fresh research because platform guidance can change.
 
 ## Phase 13 — Portfolio/similarity gate
 
 Compare against assets already generated/submitted when that information is available. Reject near-duplicate concepts, trivial crop/color variants, and repetitive batches. Prefer genuinely different concepts/use cases.
 
-## Phase 14 — Final state
+For `otra imagen`, treat the new concept as a fresh portfolio decision and do not simply regenerate the previous image with cosmetic changes.
+
+## Phase 14 — Final package + state
+
+Before returning the completed image, assemble:
+
+- exact downloadable final file;
+- exact width × height;
+- megapixels;
+- format;
+- color space;
+- file size;
+- title;
+- prioritized keywords;
+- category;
+- generative-AI disclosure;
+- release status when applicable;
+- final gate status.
 
 `READY_TO_UPLOAD` only when every mandatory gate passes.
 
