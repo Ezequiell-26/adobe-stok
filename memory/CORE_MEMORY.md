@@ -8,43 +8,75 @@ Create original, commercially useful, professional stock visuals for Adobe Stock
 
 ## Primary marketplace
 
-Adobe Stock is the primary destination for this workflow.
+Adobe Stock is the primary destination for this repository's workflow.
+
+## Time-aware doctrine
+
+The framework is persistent, but market demand, trends, search behavior, policies and creative preferences change.
+
+Every new production session must refresh current evidence when web access exists. Never reuse an old concept list merely because it was valid previously.
+
+Use three horizons:
+
+- NOW: current 0–90 day signals and opportunities;
+- NEAR: 3–12 month durable commercial themes;
+- EVERGREEN: persistent buyer needs beyond a single trend cycle.
+
+The strongest concept is often a durable buyer need expressed through a current, differentiated execution.
+
+## Evidence doctrine
+
+Prefer current official Adobe sources first, then reputable current industry/consumer evidence, then weaker supporting observations. Never invent sales volume, search volume, ranking, conversion rates or approval probabilities.
+
+Explicitly distinguish:
+
+`EVIDENCE → INTERPRETATION → COMMERCIAL HYPOTHESIS → UNKNOWN`
+
+Adobe trend/collection pages are directional signals, not public sales leaderboards.
 
 ## Current technical baseline
 
-As of repository reference date 2026-09-17, the stored Adobe photo baseline is:
+As of repository reference date 2026-09-17, current Adobe official photo guidance indicates:
 
 - JPEG;
 - sRGB;
 - 4 MP minimum;
 - 100 MP maximum;
-- 45 MB maximum;
+- 45 MB maximum file size;
 - sharp focus and good lighting;
 - no watermark, timestamp or branding.
 
-**4 MP means megapixels. 4 MB is not the minimum.** Always verify current Adobe documentation before high-volume work.
+**4 MP means megapixels. 4 MB is not the minimum.**
+
+Always re-check the official page before upload because requirements can change.
 
 ## Generative AI baseline
 
-Adobe accepts generative-AI submissions when applicable disclosure is selected and the content meets current technical, legal, metadata and quality rules. The agent must verify the generation tool's own commercial license/terms before using its output for stock licensing.
+Current Adobe documentation requires correct generative-AI disclosure for applicable AI-created submissions. The agent must also verify the generator's license permits commercial stock use and check model/property release requirements when applicable.
 
-## Current trend baseline
+## Current trend memory
 
-Adobe's 2026 trend collections currently highlight sensory appeal, deeper human connections, playful surrealism, and authentic local cultures/communities. Adobe's curated insight areas also include social fitness among Gen Z, analog/low-tech activities, fandom/community, women/wellness/longevity, Gen Z at work, Generation Alpha, multigenerational messaging, constructive sustainability, accessibility/disability, contemporary masculinity, and small life victories.
+The repository may store dated Adobe trend observations, but they are never permanent facts. Current Adobe 2026 trend collections include sensory appeal, connections, playful surrealism and authentic local flavor, with cultural-insight areas including social fitness, analog activities, fandom/community, wellness/longevity, workplace generations, accessibility, sustainability, multigenerational messaging and contemporary identity. These are current editorial/creative signals, not proof of maximum sales volume.
 
-These are **directional Adobe signals, not proof of highest sales volume**. Recheck live sources during every new research run.
+## Market-value doctrine
 
-## Intelligence doctrine
+A valuable stock asset should solve a real visual communication problem. Evaluate:
 
-The agent should behave as an evidence-driven commercial art director. It should research first, form multiple hypotheses, compare candidates, and only then commit to production.
+- buyer/use case;
+- search intent;
+- reuse breadth;
+- commercial clarity;
+- differentiation;
+- saturation;
+- seasonality;
+- production reliability;
+- technical/legal safety.
 
-Evidence hierarchy:
+Prefer:
 
-1. current official Adobe sources;
-2. current Adobe customer-facing collections/search/category signals and reputable current industry sources;
-3. secondary market observations.
+`validated demand signal + real buyer problem + distinctive execution + professional quality`
 
-Never manufacture a sales ranking, approval probability, buyer statistic, or “most requested image” claim.
+over generic popularity chasing.
 
 ## Persistent quality doctrine
 
@@ -63,34 +95,30 @@ Never manufacture a sales ranking, approval probability, buyer statistic, or “
 When appropriate:
 
 - authentic photographic perspective;
-- natural or physically coherent studio light;
-- believable optical behavior;
+- natural light or physically coherent studio light;
+- believable lens behavior;
 - realistic materials;
 - clean composition;
-- useful negative space;
+- copy space;
 - practical crop tolerance;
 - contemporary but not gimmicky art direction;
 - original generic products rather than branded objects;
-- people only when they improve the buyer use case;
+- people only when they improve the use case;
 - visually simple but conceptually strong scenes.
-
-## Competitive doctrine
-
-Do not seek an advantage through imitation, spam or volume alone. Seek it through art direction, concept specificity, buyer usefulness, technical cleanliness, meaningful differentiation and precise metadata.
-
-A crowded generic concept needs a concrete differentiation hypothesis before production.
 
 ## Forbidden assumptions
 
 Do not assume:
 
 - a trend equals demand;
+- a popular search term equals profitable licensing;
 - high resolution alone means high quality;
 - a realistic thumbnail means the image is clean at 100%;
 - an AI tool's output is automatically licensed for stock;
 - a generated person is legally risk-free;
 - more variants means more revenue;
-- a 4 MB file is required.
+- a 4 MB file is required;
+- today's best concept remains best six months from now.
 
 ## Evidence memory
 
@@ -98,11 +126,11 @@ For each production, preserve:
 
 - date;
 - official Adobe pages checked;
-- market/trend signals;
-- candidate concepts considered;
+- market/trend signals and source tier;
+- freshness of each important claim;
 - selected concept and rationale;
-- buyer use cases;
-- differentiation gap;
+- buyer/use cases;
+- saturation/differentiation assessment;
 - generator and plan;
 - license evidence;
 - prompt version;
@@ -111,6 +139,4 @@ For each production, preserve:
 - legal/release result;
 - metadata version;
 - Adobe submission outcome and refusal reason if any;
-- observed contributor-account performance when actually available.
-
-Never infer a general market rule from a single asset result. Require repeated evidence before changing persistent heuristics.
+- lesson learned.
