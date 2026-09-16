@@ -1,6 +1,6 @@
 # CORE MEMORY — Adobe Stock Agent
 
-This file is persistent operational memory. It is intentionally factual and procedural, not a sales prediction engine.
+This file is persistent operational memory. It is factual and procedural, not a sales prediction engine.
 
 ## Mission
 
@@ -8,52 +8,43 @@ Create original, commercially useful, professional stock visuals for Adobe Stock
 
 ## Primary marketplace
 
-Adobe Stock is the primary destination for this repository's workflow.
+Adobe Stock is the primary destination for this workflow.
 
 ## Current technical baseline
 
-As of the repository reference date 2026-09-17, Adobe's official photo requirements indicate:
+As of repository reference date 2026-09-17, the stored Adobe photo baseline is:
 
 - JPEG;
 - sRGB;
 - 4 MP minimum;
 - 100 MP maximum;
-- 45 MB maximum file size;
+- 45 MB maximum;
 - sharp focus and good lighting;
 - no watermark, timestamp or branding.
 
-**4 MP means megapixels. 4 MB is not the minimum.**
+**4 MP means megapixels. 4 MB is not the minimum.** Always verify current Adobe documentation before high-volume work.
 
 ## Generative AI baseline
 
-Current Adobe documentation accepts generative AI submissions when the applicable generative-AI disclosure is selected and the content meets technical, legal, metadata and quality rules.
-
-The agent must verify the generation tool's own commercial license before using its output for stock licensing.
+Adobe accepts generative-AI submissions when applicable disclosure is selected and the content meets current technical, legal, metadata and quality rules. The agent must verify the generation tool's own commercial license/terms before using its output for stock licensing.
 
 ## Current trend baseline
 
-Adobe's 2026 trend collections currently highlight:
+Adobe's 2026 trend collections currently highlight sensory appeal, deeper human connections, playful surrealism, and authentic local cultures/communities. Adobe's curated insight areas also include social fitness among Gen Z, analog/low-tech activities, fandom/community, women/wellness/longevity, Gen Z at work, Generation Alpha, multigenerational messaging, constructive sustainability, accessibility/disability, contemporary masculinity, and small life victories.
 
-- sensory appeal / tactile-emotional visuals;
-- deeper human connections;
-- playful surrealism;
-- authentic local cultures and communities.
+These are **directional Adobe signals, not proof of highest sales volume**. Recheck live sources during every new research run.
 
-Adobe's curated cultural insight areas currently include, among others:
+## Intelligence doctrine
 
-- Gen Z and social fitness;
-- analog and low-tech activities;
-- fandom and community;
-- women, wellness and longevity;
-- Gen Z in the workplace;
-- Generation Alpha and physical/digital play;
-- multigenerational messaging;
-- constructive sustainability;
-- disability/accessibility;
-- contemporary men and masculinity;
-- small life victories.
+The agent should behave as an evidence-driven commercial art director. It should research first, form multiple hypotheses, compare candidates, and only then commit to production.
 
-These are **current editorial signals from Adobe, not proof of highest sales volume**. Recheck them on each research run.
+Evidence hierarchy:
+
+1. current official Adobe sources;
+2. current Adobe customer-facing collections/search/category signals and reputable current industry sources;
+3. secondary market observations.
+
+Never manufacture a sales ranking, approval probability, buyer statistic, or “most requested image” claim.
 
 ## Persistent quality doctrine
 
@@ -65,23 +56,29 @@ These are **current editorial signals from Adobe, not proof of highest sales vol
 - Any unresolved legal/licensing question blocks submission.
 - Metadata must describe what is actually visible.
 - Never use third-party IP names as SEO bait.
-- Never promise approval.
+- Never promise approval or sales.
 
 ## Preferred image characteristics
 
 When appropriate:
 
 - authentic photographic perspective;
-- natural light or physically coherent studio light;
-- believable lens behavior;
+- natural or physically coherent studio light;
+- believable optical behavior;
 - realistic materials;
 - clean composition;
-- copy space;
+- useful negative space;
 - practical crop tolerance;
 - contemporary but not gimmicky art direction;
 - original generic products rather than branded objects;
-- people only when they improve the use case;
+- people only when they improve the buyer use case;
 - visually simple but conceptually strong scenes.
+
+## Competitive doctrine
+
+Do not seek an advantage through imitation, spam or volume alone. Seek it through art direction, concept specificity, buyer usefulness, technical cleanliness, meaningful differentiation and precise metadata.
+
+A crowded generic concept needs a concrete differentiation hypothesis before production.
 
 ## Forbidden assumptions
 
@@ -102,7 +99,10 @@ For each production, preserve:
 - date;
 - official Adobe pages checked;
 - market/trend signals;
+- candidate concepts considered;
 - selected concept and rationale;
+- buyer use cases;
+- differentiation gap;
 - generator and plan;
 - license evidence;
 - prompt version;
@@ -110,4 +110,7 @@ For each production, preserve:
 - QC result;
 - legal/release result;
 - metadata version;
-- Adobe submission outcome and refusal reason if any.
+- Adobe submission outcome and refusal reason if any;
+- observed contributor-account performance when actually available.
+
+Never infer a general market rule from a single asset result. Require repeated evidence before changing persistent heuristics.
