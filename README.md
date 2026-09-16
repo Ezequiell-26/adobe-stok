@@ -27,10 +27,10 @@ el agente debe tratarlo como su **manual operativo principal** y continuar de fo
 13. `skills/METADATA_AND_SUBMISSION.md` — metadata y portal.
 14. `skills/PORTFOLIO_AND_SIMILARITY.md` — similitud y portfolio.
 15. `skills/EXPERIMENT_AND_LEARNING_LOOP.md` — aprendizaje basado en evidencia.
-16. `skills/CHAT_OUTPUT_PROTOCOL.md` — formato de ejecución.
+16. `skills/CHAT_OUTPUT_PROTOCOL.md` — formato de ejecución y respuesta.
 17. `research/OFFICIAL_SOURCES.md` — fuentes de verificación.
 18. `research/DEMAND_SNAPSHOT_2026-09-17.md` — snapshot histórico de señales actuales.
-19. `rules/ADOBE_RULES.md`, `rules/REJECTION_GATES.md`, `rules/SAFETY_BARRIER_MATRIX.md`, `rules/OUTPUT_DELIVERY_GATE.md`.
+19. `rules/ADOBE_RULES.md`, `rules/REJECTION_GATES.md`, `rules/SAFETY_BARRIER_MATRIX.md`, `rules/OUTPUT_DELIVERY_GATE.md`, `rules/ONE_COMMAND_IMAGE_PROTOCOL.md`.
 20. `templates/` — metadata y submission record.
 
 ## OBJETIVO
@@ -64,6 +64,16 @@ y usar:
 `EVIDENCIA ACTUAL → VARIAS OPORTUNIDADES → COMPARACIÓN → ELECCIÓN JUSTIFICADA → GENERACIÓN`
 
 No se deben inventar rankings, volúmenes de búsqueda, ventas, descargas, ingresos ni afirmaciones de “lo más pedido”. Cuando la evidencia no sea suficiente, se debe marcar `UNKNOWN`.
+
+## MODO “OTRA IMAGEN”
+
+Después de completar una imagen, el usuario puede pedir únicamente **“otra imagen”**, **“otra”**, **“siguiente imagen”** o equivalente.
+
+Ese comando inicia automáticamente una nueva producción completa. No requiere repetir instrucciones.
+
+Salvo que el usuario pida continuar el mismo tema, el agente debe volver a investigar, elegir una nueva oportunidad y generar un concepto materialmente diferente. No debe reutilizar el prompt anterior ni producir una simple variación de color, crop, giro, cámara o accesorio.
+
+Cada imagen terminada debe entregar también el paquete de publicación: **archivo final verificado + resolución + título + palabras clave + categoría + AI disclosure + releases cuando correspondan + estado final**.
 
 ## INTELIGENCIA DE MERCADO
 
@@ -115,8 +125,16 @@ Adobe recomienda diversificar conceptos, curar outputs y evitar variaciones casi
 10. **Metadata basada estrictamente en lo visible y buscable.**
 11. **Etiquetar IA generativa cuando corresponda.**
 12. **Cualquier defecto material bloquea READY_TO_UPLOAD.**
-13. **Registrar resultados** para que la estrategia mejore con evidencia real.
-14. **Nunca imitar portfolios, campañas, artistas, marcas, personajes o trabajos protegidos.**
+13. **Cada “otra imagen” empieza una nueva decisión de oportunidad**, salvo que el usuario pida explícitamente continuar el mismo concepto.
+14. **No entregar una imagen como final sin título y keywords preparados**, salvo que la operación no haya llegado realmente al estado final.
+15. **Registrar resultados** para que la estrategia mejore con evidencia real.
+16. **Nunca imitar portfolios, campañas, artistas, marcas, personajes o trabajos protegidos.**
+
+## RESOLUCIÓN FINAL
+
+El requisito operativo es **mínimo 4 MP**, no exactamente 4 MP. No se debe degradar una imagen limpia de mayor resolución solo para convertirla en 4 MP. Cuando el pipeline pueda hacerlo sin introducir artefactos, es preferible entregar una resolución final mayor y útil.
+
+La imagen generada debe pasar por `rules/OUTPUT_DELIVERY_GATE.md`: la preview no es el archivo final. Si el generador entrega una imagen menor de 4 MP, el agente debe usar una vía de upscale/export adecuada y volver a inspeccionar el archivo final. Si no puede producir o verificar el archivo requerido, debe indicarlo y no declarar `READY_TO_UPLOAD`.
 
 ## ESTADO DE REFERENCIA
 
